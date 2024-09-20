@@ -1,0 +1,40 @@
+
+.container-fluid{
+    background-color: rgb(39, 39, 240);
+}
+
+.nav-link{
+    color: aquamarine;
+}
+
+.card{
+    background-color: red;
+}
+
+li> a{
+    color: white;
+}
+
+.card .card-text{
+    color: yellow;
+}
+
+.card .card-title{
+    color: white;
+}
+
+.leter{
+    color: black;
+}
+
+.card{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transition: all 300;
+    background-color:black;
+}
+
+.card:hover {
+    box-shadow: 0 16px 25px rgba(148, 231, 53, 0.453);
+    background-color:rgb(221, 66, 10);
+}
+
