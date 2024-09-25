@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+
+    function setenta(){
+    var nota1 = parseInt(document.getElementById('nota1').value);
+    var nota2 = parseInt(document.getElementById('nota2').value);
+    var nota3 = parseInt(document.getElementById('nota3').value);
+
+    var setenta = (nota1+nota2+nota3)/3*0.7;
+    
+    alert('el resultadso es: ' + setenta);
+    document.getElementById('set').value=setenta;
+    }
+
+    function treinta(){
+        var set = parseFloat(document.getElementById('set').value);
+        var examen = parseFloat(document.getElementById('examen').value);
+
+        var treinta = examen*0.3;
+        var cien = parseFloat(treinta) + parseFloat(set);
+        document.getElementById('def').value=cien;
+        alert('el resultadso es: ' + cien);
+    }
+
+    if(cien<2){
+        alert('perdio la materia');
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="https://cdn.ligadegamers.com/imagenes/escudo-fc-barcelona-para-dls-temporada-2024-2025.jpg" alt="" height="140px" width="100px"></a>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://monesport.cat/app/uploads/sites/12/2022/10/pic_2015-06-06-barcelona-juventus-150.jpg" class="d-block w-100" alt="..." >
+              </div>
+              <div class="carousel-item">
+                <img src="https://s2.sportstatics.com/relevo/www/multimedia/202409/17/media/cortadas/lamine-RS1sH5WyiirBPIpdPXTe3QL-1200x648@Relevo.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.daznservices.com/di/library/DAZN_News/e5/eb/fc-barcelona-champions-league-titel_ka5w79ir7o8p1erbqpvdqig1n.jpg?t=914868605" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Haga click para formulario
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="gradeForm">
+                        <div class="col-md-3">
+                            <label for="validationCustom01" class="form-label">Ingrese primera nota</label>
+                            <input type="number" class="form-control" id="nota1" value="Mark" required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <label for="validationCustom02" class="form-label">Ingrese segunda nota</label>
+                            <input type="number" class="form-control" id="nota2" value="Otto" required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <label for="validationCustomUsername" class="form-label">Ingrese tercera nota</label>
+                            <div class="input-group has-validation">
+                              <input type="number" class="form-control" id="nota3" aria-describedby="inputGroupPrepend" required>
+                              <div class="invalid-feedback">
+                                Please choose a username.
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="button" onclick="setenta()">Calcular el 70%</button>
+                              </div>
+                              <div class="col-md-3">
+                                <label for="validationCustomUsername" class="form-label"></label>
+                                <div class="input-group has-validation">
+                                  <input type="text" class="form-control" id="set" aria-describedby="inputGroupPrepend" required placeholder="setenta">
+                                  <div class="invalid-feedback">
+                                    Please choose a username.
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                            <label for="validationCustomUsername" class="form-label">Ingrese examen final</label>
+                            <div class="input-group has-validation">
+                              <input type="number" class="form-control" id="examen" aria-describedby="inputGroupPrepend" required>
+                              <div class="invalid-feedback">
+                                Please choose a username.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <button class="btn btn-primary" type="button" onclick="treinta()">Calcular el 30%</button>
+                          </div>
+                          <div class="col-md-3">
+                            <label for="validationCustomUsername" class="form-label"></label>
+                            <div class="input-group has-validation">
+                              <input type="text" class="form-control" id="def" aria-describedby="inputGroupPrepend" required placeholder="Definitiva">
+                              <div class="invalid-feedback">
+                                Please choose a username.
+                              </div>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+              
+      </div>
+</body>
+</html>
